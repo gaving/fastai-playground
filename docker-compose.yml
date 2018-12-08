@@ -1,0 +1,14 @@
+version: '3'
+services:
+  fastai:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        COURSE_PATH: "/workspace/fastai/courses/dl1"
+    ports:
+    - "8888:8888"
+    volumes:
+    - "./train-data:/workspace/fastai/courses/dl1/data"
+    stdin_open: true
+    tty: true
