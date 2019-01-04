@@ -33,6 +33,7 @@ RUN echo '#!/bin/bash' >> run.sh
 RUN echo 'source activate fastai' >> run.sh
 RUN echo 'pip install torchtext==0.2.3' >> run.sh
 RUN echo 'pip install graphviz' >> run.sh
+RUN echo 'pip install jupyter_contrib_nbextensions' >> run.sh
 RUN echo 'jupyter notebook --ip=0.0.0.0 \' >> run.sh
 RUN echo '--no-browser --allow-root \' >> run.sh
 RUN echo '--notebook-dir=${COURSE_PATH}' >> run.sh
